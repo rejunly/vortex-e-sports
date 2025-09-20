@@ -1,0 +1,301 @@
+/* ---- CONFIGURAÇÕES GERAIS E VARIÁVEIS ---- */
+:root {
+    --dark-bg: #121212;
+    --primary-green: #7CFC00; /* Verde Lima - Cor vibrante do seu design */
+    --light-text: #FFFFFF;
+    --secondary-text: #b3b3b3;
+    --card-bg: #1e1e1e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+}
+
+/* ---- HEADER E NAVBAR ---- */
+header {
+    background-color: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #282828;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-green);
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 20px 0 0 20px;
+    padding: 0.5rem 1rem;
+    color: var(--light-text);
+    outline: none;
+}
+
+.search-bar button {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    padding: 0.5rem 1rem;
+    color: var(--secondary-text);
+    cursor: pointer;
+}
+
+/* ---- SEÇÃO HERO ---- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9)), url('assets/hero-background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--primary-green);
+    color: var(--dark-bg);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* ---- TÍTULOS DE SEÇÃO ---- */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    padding-top: 6rem; /* Espaçamento para a navbar fixa */
+    font-weight: 700;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-green);
+    margin: 10px auto 0;
+}
+
+/* ---- SEÇÃO CARROSSEL (SOBRE) ---- */
+.carousel-section {
+    padding-bottom: 5rem;
+}
+.carousel-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+.slide-text {
+    flex: 1;
+}
+.slide-text h3 {
+    color: var(--primary-green);
+    font-weight: 700;
+}
+.slide-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.slide-text p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+.slide-image {
+    flex: 1;
+}
+.slide-image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+/* ---- SEÇÃO JOGADORES ---- */
+.players-section {
+    padding-bottom: 5rem;
+}
+.title-container {
+    text-align: center;
+    position: relative;
+    display: inline-block; /* Necessário para o hover funcionar bem */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.title-hover-box {
+    position: absolute;
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 250px;
+    top: 120%; /* Posição abaixo do título */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    text-align: left;
+}
+.title-container:hover .title-hover-box {
+    opacity: 1;
+    visibility: visible;
+}
+.title-hover-box h3 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+.title-hover-box ul {
+    list-style: none;
+}
+.title-hover-box li {
+    color: var(--secondary-text);
+    margin-bottom: 0.5rem;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.player-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.player-card:hover {
+    transform: translateY(-10px);
+}
+.player-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.player-info {
+    padding: 1.5rem;
+}
+.player-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+.player-info p {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid #282828;
+    color: var(--secondary-text);
+}
