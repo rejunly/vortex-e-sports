@@ -1,0 +1,150 @@
+.text-produtos {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-family: "Russo One", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-produtos p {
+  margin: 1rem;
+}
+.produtos {
+  overflow: hidden;
+  width: 100%;
+  padding: 3%;
+  height: max-content;
+  margin: 0;
+  background-color: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: solid 0.1rem rgb(156, 156, 156);
+  border-bottom: solid 0.1rem rgb(156, 156, 156);
+  box-sizing: border-box;
+}
+
+.produtos img {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #ffffff55;
+  border-top: solid 1px #ffffff55;
+  border-radius: 10px;
+}
+
+.botao {
+  text-decoration: none;
+  display: flex;
+  margin-top: 5%;
+  padding: 5%;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 40%;
+  background-color: #151414;
+  transition: transform 150ms ease, padding 150ms ease, box-shadow 150ms ease;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-shadow: 3px 3px 3px #000000;
+  color: #7cfc00;
+  border-bottom: solid 1px #ffffff2b;
+  border-top: solid 1px #ffffff55;
+}
+
+.botao:hover {
+  display: flex;
+  margin-top: 5%;
+  padding: 5%;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 40%;
+  box-shadow: 1px 1px 5px #000000;
+  background-color: #100f0f;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+/* ================================
+   🔥 RESPONSIVO — até 768px
+   ================================ */
+@media (max-width: 768px) {
+  .text-produtos {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .text-produtos p {
+    margin: 0.5rem;
+  }
+
+  /* Imagem */
+  .produtos img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Botão */
+  .botao {
+    width: 70%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .botao:hover {
+    width: 70%;
+    padding: 1rem;
+  }
+
+  /* Container */
+  .container {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+
+/* ================================
+   📱 RESPONSIVO — até 430px (celulares pequenos)
+   ================================ */
+@media (max-width: 430px) {
+  .text-produtos {
+    font-size: 1.4rem;
+  }
+
+  .produtos {
+    padding: 1rem;
+    overflow-x: auto; /* permite scroll horizontal */
+    overflow-y: hidden; /* evita scroll vertical desnecessário */
+    scroll-snap-type: x mandatory; /* deslize suave com “travas” */
+    display: flex;
+    justify-content: start;
+  }
+
+  .produtos img {
+    max-width: 580px;
+    border-radius: 10px;
+    width: 300px;
+  }
+
+  .botao {
+    width: 90%;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .botao:hover {
+    width: 90%;
+    padding: 0.8rem;
+  }
+}

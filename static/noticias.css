@@ -1,0 +1,202 @@
+/*AQUI FICA O CONTEUDO DAS NOTÍCIAS*/
+.noticias {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.caixas {
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2rem;
+  border-bottom: solid 1px #ffffff55;
+  border-top: solid 1px #ffffff55;
+}
+
+.text-noticias {
+  margin: 1rem !important;
+}
+
+.text-noticias p {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.noticias-img {
+  width: 450px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: solid 1px #ffffff55;
+  border-top: solid 1px #ffffff55;
+}
+
+.noticias-img div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.noticias-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.noticias-img div {
+  display: none;
+}
+.noticias-img div.active {
+  display: block;
+}
+
+.noticias-txt {
+  border-bottom: solid 1px #ffffff55;
+  border-top: solid 1px #ffffff55;
+  width: 900px;
+  height: 500px;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* título em cima, parágrafo no centro */
+  padding: 2rem 3.5rem;
+  padding-bottom: 0rem;
+  border-radius: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+}
+.titulo {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.link {
+  color: #7cfc00;
+  margin-top: 2rem;
+}
+.link a {
+  color: #7cfc00;
+  font-size: 2rem;
+}
+
+.paragrafo {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  gap: 2rem;
+}
+
+.button {
+  border: none;
+  box-shadow: 2px 1px 6px #000000;
+  background-color: #1e1e1e;
+  color: #7cfc00;
+  border-radius: 40px;
+  width: 5rem;
+  height: 2rem;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+  .noticias {
+    margin: 0rem;
+    display: flex;
+    justify-content: start;
+  }
+  .caixas {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    height: auto;
+  }
+
+  /* Texto do título das notícias */
+  .text-noticias p {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* Imagem responsiva */
+  .noticias-img {
+    width: 100%;
+    max-width: 400px;
+    height: 350px !important; /* reduzido para caber no mobile */
+  }
+
+  /* Caixa de texto das notícias */
+  .noticias-txt {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    padding: 0.5rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .titulo {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .paragrafo {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+
+  /* Botões */
+  .botoes {
+    justify-content: center;
+  }
+
+  .button {
+    width: 4rem;
+    height: 1.8rem;
+    font-size: 0.8rem;
+  }
+
+  /* Link */
+  .link {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .link a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsivo extremo (celulares muito pequenos) */
+@media (max-width: 430px) {
+  .text-noticias p {
+    font-size: 1.6rem;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+  }
+
+  .paragrafo {
+    font-size: 1rem;
+  }
+
+  .noticias-img {
+    height: 200px;
+  }
+}
