@@ -187,7 +187,7 @@ async function handleLogin(e) {
         // Redirecionar após 1.5 segundos
         setTimeout(() => {
             // Aqui você pode redirecionar para a página principal do jogo
-            window.location.href = '../index.html'; // Ajuste o caminho conforme necessário
+            window.location.href = HOME_URL;
         }, 1500);
 
     } catch (error) {
