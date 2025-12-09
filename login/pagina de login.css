@@ -79,6 +79,51 @@ p {
 }
 
 /* =========================================
+   FEEDBACK MESSAGES
+   ========================================= */
+.feedback-message {
+  display: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  width: 400px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.feedback-message.success {
+  background-color: rgba(211, 252, 114, 0.2);
+  color: #d3fc72;
+  border: 1px solid #d3fc72;
+}
+
+.feedback-message.error {
+  background-color: rgba(255, 82, 82, 0.2);
+  color: #ff5252;
+  border: 1px solid #ff5252;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
    CONTAINER PRINCIPAL (Fundo Preto)
    Centraliza o cartão na tela
    ========================================= */

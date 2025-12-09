@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pagina de login.css">
+    <!-- Supabase Client Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js" defer></script>
     <script src="paginadelogin.js" defer></script>
     <title> Formulário Interativo </title>
 </head>
@@ -22,10 +25,11 @@
             <div class="esquerda">
                 <div class="formLogin">
                     <h2>Fazer Login</h2>
-                    <form>
-                        <input type="email" placeholder="E-mail">
-                        <input type="password" placeholder="Senha">
-                        <button type="submit">Entrar</button>
+                    <div id="login-feedback" class="feedback-message"></div>
+                    <form id="login-form">
+                        <input type="email" id="login-email" placeholder="E-mail" required>
+                        <input type="password" id="login-password" placeholder="Senha" required>
+                        <button type="submit" id="login-btn">Entrar</button>
                     </form>
                 </div>
 
@@ -47,6 +51,18 @@
 
             <!-- LADO DIREITO: Contém o Formulário de Cadastro e o Prompt "Não tem conta?" -->
             <div class="direita">
+                <div class="formCadastro">
+                    <h2>Criar Conta</h2>
+                    <div id="cadastro-feedback" class="feedback-message"></div>
+                    <form id="cadastro-form">
+                        <input type="text" id="cadastro-username" placeholder="Nome de Usuário" required>
+                        <input type="email" id="cadastro-email" placeholder="E-mail" required>
+                        <input type="password" id="cadastro-password" placeholder="Senha" required>
+                        <input type="password" id="cadastro-confirm-password" placeholder="Confirmar Senha" required>
+                        <button type="submit" id="cadastro-btn">Cadastrar</button>
+                    </form>
+                </div>
+
                 <div class="facaCadastro">
                     <h2>Não tem <br>uma conta?</h2>
                     <p>Crie uma agora para fazer parte <br> da nossa comunidade!</p>
@@ -67,4 +83,4 @@
     <button class="voltar-btn" onclick="window.location.href='outrpagina.html'">Voltar</button>
 </body>
 
-</html>    <button class="voltar-btn" onclick="window.location.href='outraPagina.html'">Voltar</button>
+</html> <button class="voltar-btn" onclick="window.location.href='outraPagina.html'">Voltar</button>
