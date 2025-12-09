@@ -47,12 +47,22 @@ button {
 }
 
 input {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: rgba(22, 0, 22, 0.671);
+  background-color: rgba(200, 240, 120, 0.3);
+  color: rgba(80, 80, 80, 0.8);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(200, 240, 120, 0.3) inset !important;
+  -webkit-text-fill-color: rgba(80, 80, 80, 0.8) !important;
+  background-color: rgba(200, 240, 120, 0.3) !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 input::placeholder {
-  color: rgba(5, 1, 14, 0.5);
+  color: rgba(100, 100, 100, 0.6);
 }
 
 button {
@@ -94,9 +104,9 @@ p {
 }
 
 .feedback-message.success {
-  background-color: rgba(211, 252, 114, 0.2);
-  color: #d3fc72;
-  border: 1px solid #d3fc72;
+  background-color: rgba(85, 49, 153, 0.2);
+  color: #553199;
+  border: 1px solid #553199;
 }
 
 .feedback-message.error {
@@ -221,7 +231,7 @@ button:disabled {
    ========================================= */
 .green-curtain {
   /* Green Curtain: Verde Citrico Fade */
-  background: linear-gradient(135deg, #d3fc72 0%, rgba(211, 252, 114, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(135deg, #9bce26 0%, rgba(211, 252, 114, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
   z-index: 1;
   /* Above image, below content */
   mix-blend-mode: color-dodge;
