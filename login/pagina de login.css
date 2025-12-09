@@ -1,0 +1,337 @@
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(assets/Poppins-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* =========================================
+   RESET E ESTILOS GERAIS
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins-Black", sans-serif;
+  font-weight: normal;
+}
+
+
+body {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+
+h2 {
+  font-size: 60px;
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input,
+button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 400px;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(22, 0, 22, 0.671);
+}
+
+input::placeholder {
+  color: rgba(5, 1, 14, 0.5);
+}
+
+button {
+  margin-top: 8px;
+  font-weight: 700;
+  /* Palette Image: Roxo #553199, Roxo Escuro #342066, Verde Citrico #d3fc72 */
+  color: #d3fc72;
+  /* Verde Citrico Text */
+  background-image: linear-gradient(90deg, #553199 0%, #342066 100%);
+  /* Roxo -> Roxo Escuro */
+  border: 1px solid #d3fc72;
+  /* Verde Citrico Border */
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+p {
+  margin-bottom: 32px;
+  text-align: center;
+  width: 400px;
+  color: rgba(202, 191, 197, 0.8);
+}
+
+/* =========================================
+   CONTAINER PRINCIPAL (Fundo Preto)
+   Centraliza o cartão na tela
+   ========================================= */
+.containerPai {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  /* Black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================
+   CARTÃO DE LOGIN (Fundo Grafite)
+   Onde toda a mágica do deslizamento acontece
+   ========================================= */
+.card {
+  width: 80%;
+  height: 90vh;
+  background-color: #1e1b26;
+  /* Grafite */
+  border: 1px solid #553199;
+  /* Roxo Border */
+  padding: 32px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  /* Esconde o que sai para fora do cartão */
+}
+
+.esquerda,
+.direita {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.formLogin,
+.facaLogin,
+.formCadastro,
+.facaCadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.facaLogin,
+.facaCadastro {
+  position: absolute;
+}
+
+.facaLogin h2,
+.facaLogin p,
+.facaCadastro h2,
+.facaCadastro p {
+  color: #d3fc72;
+}
+
+.facaLogin button,
+.facaCadastro button {
+  background: transparent;
+  border: 2px solid #d3fc72;
+  color: #d3fc72;
+}
+
+.card::after,
+.green-curtain {
+  width: 50%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.card::after {
+  background-image: url("https://papelariacriativa.com.br/wp-content/uploads/placa-eva-liso-40x60-verde-citrico-2.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* =========================================
+   EFEITO "GREEN SCREEN" (CORTINA)
+   A camada verde que desliza e cria o efeito Chroma Key
+   ========================================= */
+.green-curtain {
+  /* Green Curtain: Verde Citrico Fade */
+  background: linear-gradient(135deg, #d3fc72 0%, rgba(211, 252, 114, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+  /* Above image, below content */
+  mix-blend-mode: color-dodge;
+  /* Blends with dark BG for "Green Screen" feel */
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+/* Ensure content on top */
+.esquerda,
+.direita {
+  z-index: 2;
+}
+
+.formLogin,
+.facaCadastro {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(20%);
+  transition: all .4s;
+}
+
+.formCadastro,
+.facaLogin {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+  transition: all .4s;
+}
+
+.facaLogin {
+  transform: translateX(-250%);
+}
+
+.card.loginActive .formLogin,
+.card.loginActive .facaCadastro {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+}
+
+.card.loginActive .formCadastro,
+.card.loginActive .facaLogin {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-20%);
+}
+
+.card.loginActive::after,
+.card.loginActive .green-curtain {
+  transform: translateX(-100%);
+}
+
+
+.card.cadastroActive .formCadastro,
+.card.cadastroActive .facaLogin {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+}
+
+.card.cadastroActive .formLogin,
+.card.cadastroActive .facaCadastro {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(20%);
+}
+
+.card.cadastroActive::after,
+.card.cadastroActive .green-curtain {
+  transform: translateX(0);
+}
+
+.voltar-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(85, 49, 153, 0.8);
+  /* Roxo #553199 */
+  border: 1px solid #d3fc72;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.voltar-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.voltar-btn:hover {
+  background: #553199;
+  box-shadow: 0 0 10px #d3fc72;
+  transform: scale(1.1);
+}
+
+
+/* =========================================
+   PROVA SOCIAL (CONTADORES)
+   Estilos do contador "Exploradores"
+   ========================================= */
+/* Social Proof Styles */
+.social-proof {
+  margin-bottom: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.adventure-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px !important;
+  /* Override default p margin */
+  width: 100%;
+}
+
+.counter-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(210, 248, 116, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.counter-box .user-count {
+  font-size: 22px;
+  /* Reduzido de 24px para 22px */
+  font-weight: 900;
+  color: #ffffff !important;
+  /* Branco forçado */
+}
+
+.counter-box .count-plus {
+  font-size: 20px;
+  color: #d3fc72;
+}
+
+.counter-box .label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d3fc72;
+  /* Texto também em Verde Cítrico */
+}

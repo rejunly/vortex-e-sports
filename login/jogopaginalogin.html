@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagina de login.css">
+    <script src="paginadelogin.js" defer></script>
+    <title> Formulário Interativo </title>
+</head>
+
+<body>
+    <section class="containerPai">
+        <!-- O Card é o container principal que desliza -->
+        <!-- As classes 'cadastroActive' e 'loginActive' controlam qual lado aparece -->
+        <div class="card cadastroActive">
+            <!-- A cortina verde que faz a transição (Efeito Chroma Key) -->
+            <div class="green-curtain"></div>
+
+
+            <!-- LADO ESQUERDO: Contém o Formulário de Login e o Prompt "Já tem conta?" -->
+            <div class="esquerda">
+                <div class="formLogin">
+                    <h2>Fazer Login</h2>
+                    <form>
+                        <input type="email" placeholder="E-mail">
+                        <input type="password" placeholder="Senha">
+                        <button type="submit">Entrar</button>
+                    </form>
+                </div>
+
+                <div class="facaLogin">
+                    <h2>Já tem <br>uma conta?</h2>
+                    <p>Entre para continuar</p>
+                    <div class="social-proof">
+                        <p class="adventure-text">Seu lugar está esperando por você.</p>
+                        <div class="counter-box">
+                            <span class="count-plus">+</span>
+                            <span class="user-count">0</span>
+                            <span class="label">Exploradores</span>
+                        </div>
+                    </div>
+                    <button class="loginButton">Faça login</button>
+                </div>
+            </div>
+
+
+            <!-- LADO DIREITO: Contém o Formulário de Cadastro e o Prompt "Não tem conta?" -->
+            <div class="direita">
+                <div class="facaCadastro">
+                    <h2>Não tem <br>uma conta?</h2>
+                    <p>Crie uma agora para fazer parte <br> da nossa comunidade!</p>
+                    <div class="social-proof">
+                        <p class="adventure-text">A aventura começa aqui! Junte-se também à comunidade</p>
+                        <div class="counter-box">
+                            <span class="count-plus">+</span>
+                            <span class="user-count">0</span>
+                            <span class="label">Exploradores</span>
+                        </div>
+                    </div>
+                    <button class="cadastroButton">Cadastre-se</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <button class="voltar-btn" onclick="window.location.href='outrpagina.html'">Voltar</button>
+</body>
+
+</html>    <button class="voltar-btn" onclick="window.location.href='outraPagina.html'">Voltar</button>
