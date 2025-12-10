@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex E-sports | Transmissão Ao Vivo</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    /* ---- VARIÁVEIS E BASE ---- */
+    :root {
+      --dark-bg: #121212;
+      --primary-green: #7CFC00;
+      --light-text: #FFFFFF;
+      --secondary-text: #b3b3b3;
+      --card-bg: #1e1e1e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--light-text);
+      background-image: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('fundo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: var(--dark-bg);
+    }
+
+    /* ---- NAVBAR ---- */
+    header {
+      background-color: rgba(18, 18, 18, 0.8);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #282828;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--light-text);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--light-text);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-green);
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .navbar-right a {
+      color: var(--light-text);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-right a:hover {
+      color: var(--primary-green);
+    }
+
+    /* ---- CONTEÚDO PRINCIPAL ---- */
+    main {
+      margin-top: 100px;
+    }
+
+    .live-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .stream-container {
+      flex: 1 1 700px;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      border: 1px solid #333;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(124, 252, 0, 0.1);
+    }
+
+    .stream-container iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      display: block;
+    }
+
+    .chat-container {
+      flex: 1 1 350px;
+      max-width: 400px;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      border: 1px solid #333;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(124, 252, 0, 0.1);
+    }
+
+    .chat-container iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+    }
+
+    /* ---- INFO DE LIVES ---- */
+    .live-info {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .live-info h2 {
+      font-size: 2.5rem;
+      color: var(--primary-green);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .live-info h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: var(--primary-green);
+      margin: 10px auto 0;
+    }
+
+    .live-info p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--secondary-text);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .schedule {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .schedule-card {
+      background-color: var(--card-bg);
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 2rem;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .schedule-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 15px rgba(124, 252, 0, 0.2);
+    }
+
+    .schedule-card h3 {
+      color: var(--primary-green);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .schedule-card p {
+      color: var(--secondary-text);
+      line-height: 1.5;
+    }
+
+    .schedule-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--primary-green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #282828;
+      color: var(--secondary-text);
+      background-color: rgba(18, 18, 18, 0.8);
+    }
+
+    /* ---- RESPONSIVO ---- */
+    @media (max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .live-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .stream-container iframe,
+      .chat-container iframe {
+        height: 360px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Logo Vortex">
+        <span>VORTEX</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">TIME VORTEX</a></li>
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#contato">CONTATO</a></li>
+      </ul>
+      <div class="navbar-right">
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="live-section">
+      <div class="stream-container">
+        <!-- Substitua "riotgames" e "example.com" pelo seu canal/domínio -->
+        <iframe
+            src="https://player.twitch.tv/?channel=valorant_br&parent=localhost"
+            frameborder="0"
+            allowfullscreen="true"
+            scrolling="no"
+            height="480"
+            width="100%">
+        </iframe>
+      </div>
+
+      <div class="chat-container">
+        <iframe src="https://www.twitch.tv/valorant_br"></iframe>
+      </div>
+    </section>
+
+    <section class="live-info">
+      <h2>TRANSMISSÕES AO VIVO</h2>
+      <p>Assista às transmissões da equipe <strong>Vortex E-sports</strong> diretamente da Twitch e YouTube. Treinos, partidas e torneios em tempo real!</p>
+
+      <div class="schedule">
+        <div class="schedule-card">
+          <h3>🟢 Próxima Live</h3>
+          <p>30 de Outubro - 20h</p>
+          <p>Partida de treino com interação ao vivo!</p>
+        </div>
+        <div class="schedule-card">
+          <h3>📺 Última Transmissão</h3>
+          <p>Replay disponível no canal do YouTube.</p>
+          <a href="https://youtube.com" target="_blank">Assistir agora</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <p>&copy; 2025 Vortex E-sports. Todos os direitos reservados. Projeto da II Semana de Informática - IFRN Campus Apodi.</p>
+  </footer>
+</body>
+</html>
