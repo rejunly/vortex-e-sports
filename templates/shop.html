@@ -13,37 +13,44 @@
 </head>
 
 <body>
-  <header>
-      <nav class="navbar">
-        <a href="#" class="logo">
-          <img
-            src="{{ url_for('static', filename='FOTOS/logo.png') }}"
-            alt="Logo Time Vortex"
-          />
-          <span>VORTEX</span>
+<header>
+  <nav class="navbar">
+
+    <a href="#" class="logo">
+      <img src="{{ url_for('static', filename='FOTOS/logo.png') }}" alt="Logo Time Vortex" />
+      <span>VORTEX</span>
+    </a>
+
+    <ul class="nav-links">
+
+      <li><a href="{{ url_for('home') }}">HOME</a></li>
+
+      <li class="dropdown">
+        <a href="#">
+          TIME VORTEX <i class="fas fa-chevron-down"></i>
         </a>
-
-        <ul class="nav-links">
-          <l1><a href="{{ url_for('home') }}">HOME</a></l1>
-          <li class="dropdown">
-            <a> TIME VORTEX <i class="fas fa-chevron-down"></i> </a>
-            <ul class="dropdown-menu">
-              <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
-              <li><a href="{{ url_for('transmission') }}">Transmissão ao Vivo</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ url_for('shop') }}">SHOP</a></li>
-          <li><a href="#contato">CONTATO</a></li>
+        <ul class="dropdown-menu">
+          <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
+          <li><a href="{{ url_for('transmission') }}">Transmissão ao Vivo</a></li>
         </ul>
+      </li>
 
-        <div class="navbar-right">
-          <a href="#" class="login-button">ENTRAR</a>
-          <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-        </div>
-      </nav>
-    </header>
+      <li><a href="{{ url_for('shop') }}">SHOP</a></li>
+      <li><a href="#contato">CONTATO</a></li>
+
+    </ul>
+
+    <div class="navbar-right">
+      <a href="#" id="btnCarrinho" class="cart-icon-wrapper">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count" class="cart-count">0</span>
+      </a>
+      <a href="#"><i class="fas fa-user"></i></a>
+    </div>
+
+  </nav>
+</header>
+
 
   <section class="hero">
     <h1>VORTEX ARMORY</h1>

@@ -30,16 +30,6 @@ header {
   z-index: 1000;
   border-bottom: 1px solid #282828;
 }
-/* ---- HEADER E NAVBAR ---- */
-header {
-  background-color: rgba(18, 18, 18, 0.8);
-  backdrop-filter: blur(10px);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #282828;
-}
 
 .navbar {
   display: flex;
@@ -68,6 +58,8 @@ header {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -103,56 +95,11 @@ header {
   color: var(--secondary-text);
   cursor: pointer;
 }
-
-/* ---- FOOTER ---- */
-footer {
-  text-align: center;
-  padding: 2rem;
-  margin-top: 3rem;
-  border-top: 1px solid #282828;
-  color: var(--secondary-text);
-}
-
-/* ---- ESTILOS DO MENU DROPDOWN ---- */
-.nav-links .dropdown {
-  position: relative;
-}
-
-.dropdown .fa-chevron-down {
-  font-size: 0.8em;
-  margin-left: 5px;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--card-bg);
-  list-style: none;
-  padding: 0.5rem 0;
-  border-radius: 8px;
-  border: 1px solid #333;
-  min-width: 160px;
-  z-index: 1001;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu li a {
-  padding: 0.75rem 1.5rem;
-  display: block;
-  color: var(--light-text);
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-  background-color: #2a2a2a;
-  color: var(--primary-green);
-}
+.navbar-right { display: flex; align-items: center; gap: 1.5rem; }
+.navbar-right a { color: var(--light-text); font-size: 1.2rem; text-decoration: none; transition: color 0.3s ease; }
+.navbar-right a:hover { color: var(--primary-green); }
+.cart-icon-wrapper { position: relative; }
+.cart-count { position: absolute; top: -8px; right: -10px; background-color: var(--primary-green); color: var(--dark-bg); border-radius: 50%; width: 20px; height: 20px; font-size: 0.75rem; font-weight: bold; display: flex; justify-content: center; align-items: center; }
 
 /* HERO */
 .hero { height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 2rem; }
@@ -219,3 +166,45 @@ footer { text-align: center; padding: 3rem 2rem; margin-top: 3rem; border-top: 1
 .footer-content { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; max-width: 800px; margin: 0 auto; }
 .footer-content img { max-width: 50px; border-radius: 8px; } /* max-width: 50px; foi mantido do seu código original */
 .footer-content p { font-size: 0.9rem; line-height: 1.6; }
+
+
+/* ---- ESTILOS DO MENU DROPDOWN ---- */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.dropdown .fa-chevron-down {
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--card-bg);
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #333;
+  min-width: 160px;
+  z-index: 1001;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 0.75rem 1.5rem;
+  display: block;
+  color: var(--light-text);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #2a2a2a;
+  color: var(--primary-green);
+}
