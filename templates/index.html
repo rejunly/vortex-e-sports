@@ -25,14 +25,15 @@
         </a>
 
         <ul class="nav-links">
+          <l1><a href="{{ url_for('home') }}">HOME</a></l1>
           <li class="dropdown">
             <a> TIME VORTEX <i class="fas fa-chevron-down"></i> </a>
             <ul class="dropdown-menu">
               <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
-              <li><a href="{{ url_for('timevortex') }}">Jogadores</a></li>
+              <li><a href="{{ url_for('transmission') }}">Transmissão ao Vivo</a></li>
             </ul>
           </li>
-          <li><a href="#">SHOP</a></li>
+          <li><a href="{{ url_for('shop') }}">SHOP</a></li>
           <li><a href="#contato">CONTATO</a></li>
         </ul>
 
