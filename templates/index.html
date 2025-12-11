@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vortex E-sports</title>
     <link rel="icon" href="logo.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/estilo-jogadores.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,31 +15,34 @@
 <body>
 
     <header>
-        <nav class="navbar">
-            <a href="#" class="logo">
-            <img src="logo.png" alt="Logo Time Vortex">
-            <span>VORTEX</span>
-            </a>
+      <nav class="navbar">
+        <a href="#" class="logo">
+          <img
+            src="{{ url_for('static', filename='FOTOS/logo.png') }}"
+            alt="Logo Time Vortex"
+          />
+          <span>VORTEX</span>
+        </a>
 
-            <ul class="nav-links">
-            <li class="dropdown">
-                <a href="#" class="highlight-link">TIME VORTEX <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#sobre">Sobre o Time</a></li>
-                    <li><a href="#jogadores">Jogadores</a></li>
-                </ul>
-            </li>
-            <li><a href="#">SHOP</a></li>
-            <li><a href="#contato">CONTATO</a></li>
+        <ul class="nav-links">
+          <li class="dropdown">
+            <a> TIME VORTEX <i class="fas fa-chevron-down"></i> </a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
+              <li><a href="{{ url_for('timevortex') }}">Jogadores</a></li>
             </ul>
+          </li>
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#contato">CONTATO</a></li>
+        </ul>
 
-            <div class="navbar-right">
-                <a href="#" class="login-button">ENTRAR</a>
-                <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
-                <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
-                <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-            </div>
-        </nav>
+        <div class="navbar-right">
+          <a href="#" class="login-button">ENTRAR</a>
+          <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+          <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+          <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+        </div>
+      </nav>
     </header>
 
     <main>
@@ -82,7 +85,7 @@
                             <p>A Vortex nasceu de um propósito claro e de um ambiente de inovação: representar o talento e a dedicação dos alunos do IFRN - Campus Apodi no campeonato de jogos digitais da II Semana de Informática. Nossa fundação está enraizada no conhecimento técnico e na busca pela excelência que o IFRN inspira. Carregamos com orgulho o nome da nossa instituição, transformando o aprendizado da sala de aula em vitórias espetaculares nas arenas virtuais.</p>
                         </div>
                         <div class="slide-image">
-                             <img src="ifrnapodi.jpeg" alt="Visão da equipe">
+                             <img src="/static/FOTOS/ifrnapodi.jpeg" alt="Visão da equipe">
                         </div>
                     </div>
                 </div>
@@ -131,9 +134,9 @@
                     <div class="player-card">
                         <img src="assets/player-zecomeia.jpg" alt="Jogador ZECOMEIA">
                         <div class="player-info">
-                            <h4>ZÉ COMEIA</h4>
+                            <h4>ZÉ COLMEIA</h4>
                             <p class="real-name">João Victor</p>
-                            <p class="role">Iniciador</p>
+                            <p class="role">Controlador</p>
                             <div class="player-socials">
                                 <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
                                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -173,6 +176,6 @@
         <p>&copy; 2025 Vortex E-sports. Todos os direitos reservados. Projeto da II Semana de Informática - IFRN Campus Apodi.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/static/script/script-jogadores.js"></script>
 </body>
 </html>

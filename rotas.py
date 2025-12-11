@@ -15,3 +15,11 @@ def home():
 @app.route('/timevortex')
 def timevortex():
     return render_template('index.html')
+
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
+
+@app.route('/transmission')
+def transmission():
+    return render_template('tela_transmissao.html')

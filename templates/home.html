@@ -36,7 +36,7 @@
     <!-- CSS -->
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
+      href="{{ url_for('static', filename='estilo-home.css') }}"
     />
     <link
       rel="stylesheet"
@@ -86,10 +86,10 @@
             <a> TIME VORTEX <i class="fas fa-chevron-down"></i> </a>
             <ul class="dropdown-menu">
               <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
-              <li><a href="{{ url_for('timevortex') }}">Jogadores</a></li>
+              <li><a href="{{ url_for('transmission') }}">Transmissão ao Vivo</a></li>
             </ul>
           </li>
-          <li><a href="#">SHOP</a></li>
+          <li><a href="{{ url_for('shop') }}">SHOP</a></li>
           <li><a href="#contato">CONTATO</a></li>
         </ul>
 
