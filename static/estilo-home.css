@@ -163,7 +163,6 @@ footer {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  margin-top: 4rem;
   object-fit: cover;
   box-shadow: 70px 50px 100px #000000;
   border-bottom: solid 1px #ffffff55;
@@ -181,7 +180,7 @@ footer {
 }
 .slide img {
   width: 100vw;
-  height: 100vh;
+  height: auto;
 }
 
 .manual-navigation {
@@ -189,7 +188,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: -6rem;
+  top: 95%;
 }
 
 .manual-btn {
@@ -304,6 +303,8 @@ footer {
   .slide {
     width: 100%; /* cada slide ocupa exatamente a largura da tela */
     flex-shrink: 0; /* impede encolher e empurrar */
+    overflow: hidden;
+    height:auto;
   }
 
   .slide img {

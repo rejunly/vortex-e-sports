@@ -2,6 +2,7 @@ from app import app
 from flask import render_template
 import calendar
 
+'''Devo criar a tela perfil, desenvolvendo uma estrutura base para modificar com o DOM.'''
 # --- Rota de homepage --- 
 @app.route('/')
 def logincadastro():

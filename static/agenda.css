@@ -102,6 +102,112 @@
   margin: 0;
 }
 
+
+/* ——————————————————————
+   🔥  DESKTOP / TELAS GRANDES (maiores que 1200px)
+—————————————————————— */
+@media (min-width: 1200px) {
+
+  /* Títulos maiores e mais destacados */
+  .text-noticias,
+  .text-agenda p {
+    font-size: 4rem; /* aumenta de 3rem para 4rem */
+    text-align: left;
+    margin: 3rem 2rem;
+  }
+
+  /* Caixas da agenda com mais espaço */
+  .caixas_agenda {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  /* Ajuste de largura das caixas */
+  .agenda_box_1,
+  .agenda_box_2 {
+    width: 48%; /* ocupa quase metade da tela cada */
+    height: auto;
+  }
+
+  /* Calendário maior */
+  #calendar {
+    width: 100%;
+    font-size: 1.1rem; /* aumenta a legibilidade */
+  }
+
+  /* Título do calendário */
+  .fc-left h2,
+  .fc-center h2 {
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Caixa de informações */
+  .agenda_box_2 {
+    padding: 2rem;
+    gap: 2rem;
+    height: 600px; /* mais alto para balancear com o calendário */
+  }
+
+  .agenda_box_2 h1 {
+    font-size: 2.5rem;
+  }
+
+  .agenda_box_2 p {
+    font-size: 1.8rem;
+  }
+
+  #footer-agenda {
+    font-size: 1rem;
+  }
+}
+
+/* ——————————————————————
+   🔥  TELAS EXTRA-GRANDES (maiores que 1600px)
+—————————————————————— */
+@media (min-width: 1600px) {
+
+  .text-noticias,
+  .text-agenda p {
+    font-size: 5rem;
+    margin: 4rem 3rem;
+  }
+
+  .caixas_agenda {
+    gap: 3rem;
+    padding: 2rem 4rem;
+  }
+
+  .agenda_box_2 {
+    padding: 3rem;
+    height: 650px;
+  }
+
+  .agenda_box_2 h1 {
+    font-size: 3rem;
+  }
+
+  .agenda_box_2 p {
+    font-size: 2rem;
+  }
+
+  #calendar {
+    font-size: 1.2rem;
+  }
+
+  .fc-left h2,
+  .fc-center h2 {
+    font-size: 2rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  #footer-agenda {
+    font-size: 1.2rem;
+  }
+}
+
+
 /* ——————————————————————
    🔥  MOBILE (até 768px)
 —————————————————————— */
