@@ -80,11 +80,13 @@
 
         </div>
     </section>
-    <button class="voltar-btn" onclick="window.location.href='outrpagina.html'">Voltar</button>
+    <a href="{{ url_for('home') }}" class="voltar-btn">
+        <img src="{{ url_for('static', filename='icone-voltar.png') }}" alt="Voltar">
+    </a>
     <script>
         const HOME_URL = "{{ url_for('home') }}";
     </script>
 
 </body>
 
-</html> <button class="voltar-btn" onclick="window.location.href='outraPagina.html'">Voltar</button>
+</html>

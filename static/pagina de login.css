@@ -310,12 +310,16 @@ button:disabled {
   position: fixed;
   top: 20px;
   left: 20px;
-  background: rgba(85, 49, 153, 0.8);
-  /* Roxo #553199 */
-  border: 1px solid #d3fc72;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  background: transparent;
+  /* Removed background */
+  border: none;
+  /* Removed border */
+  border-radius: 0;
+  /* Removed border radius */
+  width: auto;
+  /* Auto width */
+  height: auto;
+  /* Auto height */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -325,13 +329,15 @@ button:disabled {
 }
 
 .voltar-btn img {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  /* Increased size */
+  height: 50px;
+  /* Increased size */
 }
 
 .voltar-btn:hover {
-  background: #553199;
-  box-shadow: 0 0 10px #d3fc72;
+  background: transparent;
+  box-shadow: none;
   transform: scale(1.1);
 }
 

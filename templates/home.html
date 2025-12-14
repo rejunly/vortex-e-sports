@@ -1,337 +1,212 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vortex E-sports</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vortex E-sports</title>
 
-    <!-- Moment.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- FullCalendar v3 -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
-    <!-- Ícone -->
-    <link
-      rel="icon"
-      href="{{ url_for('static', filename='FOTOS/logo.png') }}"
-      type="image/png"
-    />
+  <!-- FullCalendar v3 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='estilo-home.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='noticias.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='produtos.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='agenda.css') }}"
-    />
+  <!-- Ícone -->
+  <link rel="icon" href="{{ url_for('static', filename='FOTOS/logo.png') }}" type="image/png" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
-      rel="stylesheet"
-    />
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo-home.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='noticias.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='produtos.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='agenda.css') }}" />
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-  </head>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <a href="#" class="logo">
-          <img
-            src="{{ url_for('static', filename='FOTOS/logo.png') }}"
-            alt="Logo Time Vortex"
-          />
-          <span>VORTEX</span>
-        </a>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
 
-        <ul class="nav-links">
-          <l1><a href="{{ url_for('home') }}">HOME</a></l1>
-          <li class="dropdown">
-            <a> TIME VORTEX <i class="fas fa-chevron-down"></i> </a>
-            <ul class="dropdown-menu">
-              <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
-              <li><a href="{{ url_for('transmission') }}">Transmissão ao Vivo</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ url_for('shop') }}">SHOP</a></li>
-          <li><a href="#contato">CONTATO</a></li>
-        </ul>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="{{ url_for('static', filename='FOTOS/logo.png') }}" alt="Logo Time Vortex" />
+        <span>VORTEX</span>
+      </a>
 
-        <div class="navbar-right">
-          <a href="#" class="login-button">ENTRAR</a>
-          <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-        </div>
-      </nav>
-    </header>
+      <ul class="nav-links">
+        <l1><a href="{{ url_for('home') }}">HOME</a></l1>
+        <li class="dropdown">
+          <a> TIME VORTEX <i class="fas fa-chevron-down"></i> </a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
+            <li><a href="{{ url_for('transmission') }}">Transmissão ao Vivo</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ url_for('shop') }}">SHOP</a></li>
+        <li><a href="#contato">CONTATO</a></li>
+      </ul>
 
-    <!-- Slider -->
-    <div class="slider">
-      <div class="slides">
-        <input type="radio" name="radio-btn" id="radio0" />
-        <input type="radio" name="radio-btn" id="radio1" />
-        <input type="radio" name="radio-btn" id="radio2" />
-        <input type="radio" name="radio-btn" id="radio3" />
+      <div class="navbar-right">
+        <a href="{{ url_for('logincadastro') }}" class="login-button">ENTRAR</a>
+        <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+      </div>
+    </nav>
+  </header>
 
-        <div class="slide first">
-          <img
-            src="{{ url_for('static', filename='img-slide/1.jpeg') }}"
-            alt="imagem 1"
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="{{ url_for('static', filename='img-slide/2.jpeg') }}"
-            alt="imagem 2"
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="{{ url_for('static', filename='img-slide/3.jpeg') }}"
-            alt="imagem 3"
-          />
-        </div>
-        <div class="slide">
-          <img
-            src="{{ url_for('static', filename='img-slide/4.png') }}"
-            alt="imagem 4"
-          />
-        </div>
+  <!-- Slider -->
+  <div class="slider">
+    <div class="slides">
+      <input type="radio" name="radio-btn" id="radio0" />
+      <input type="radio" name="radio-btn" id="radio1" />
+      <input type="radio" name="radio-btn" id="radio2" />
+      <input type="radio" name="radio-btn" id="radio3" />
 
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-          <div class="auto-btn4"></div>
-        </div>
+      <div class="slide first">
+        <img src="{{ url_for('static', filename='img-slide/1.jpeg') }}" alt="imagem 1" />
+      </div>
+      <div class="slide">
+        <img src="{{ url_for('static', filename='img-slide/2.jpeg') }}" alt="imagem 2" />
+      </div>
+      <div class="slide">
+        <img src="{{ url_for('static', filename='img-slide/3.jpeg') }}" alt="imagem 3" />
+      </div>
+      <div class="slide">
+        <img src="{{ url_for('static', filename='img-slide/4.png') }}" alt="imagem 4" />
       </div>
 
-      <div class="manual-navigation">
-        <label for="radio0" class="manual-btn" id="btn0"></label>
-        <label for="radio1" class="manual-btn" id="btn1"></label>
-        <label for="radio2" class="manual-btn" id="btn2"></label>
-        <label for="radio3" class="manual-btn" id="btn3"></label>
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
       </div>
     </div>
 
-    <!-- Notícias -->
-    <div class="noticias">
-      <div class="text-noticias">
-        <p>Principais notícias</p>
-      </div>
-      <div class="caixas">
-        <div class="noticias-img">
-          <div class="noticia-imagem-1 active">
-            <img
-              src="{{ url_for('static', filename='img-noticias/img-noticias-1..png') }}"
-            />
-          </div>
-          <div class="noticia-imagem-2">
-            <img
-              src="{{ url_for('static', filename='img-noticias/img-noticias-2.png') }}"
-            />
-          </div>
-          <div class="noticia-imagem-3">
-            <img
-              src="{{ url_for('static', filename='img-noticias/img-noticias-3.png') }}"
-            />
-          </div>
+    <div class="manual-navigation">
+      <label for="radio0" class="manual-btn" id="btn0"></label>
+      <label for="radio1" class="manual-btn" id="btn1"></label>
+      <label for="radio2" class="manual-btn" id="btn2"></label>
+      <label for="radio3" class="manual-btn" id="btn3"></label>
+    </div>
+  </div>
+
+  <!-- Notícias -->
+  <div class="noticias">
+    <div class="text-noticias">
+      <p>Principais notícias</p>
+    </div>
+    <div class="caixas">
+      <div class="noticias-img">
+        <div class="noticia-imagem-1 active">
+          <img src="{{ url_for('static', filename='img-noticias/img-noticias-1..png') }}" />
         </div>
-        <div class="noticias-txt">
-          <div class="titulo">
-            <p id="titulo">VORTEX BATE META DE SEGUIDORES</p>
-          </div>
-          <div class="paragrafo">
-            <p id="paragrafo">
-              "No dia 05/10/2025, a VORTEX alcançou a marca de 1 milhão de
-              seguidores no Instagram, um marco importante na trajetória do
-              time. Os jogadores comemoram a conquista, que representa o
-              reconhecimento do trabalho da equipe e o apoio da comunidade de
-              fãs. Essa conquista reforça a presença da VORTEX nas redes sociais
-              e mostra como os torcedores acompanham e celebram cada passo do
-              time. Confira todos os detalhes no link abaixo!";
-            </p>
-          </div>
-          <div class="link">
-            <a href="https://chatgpt.com/">detalhes</a>
-          </div>
-          <div class="botoes">
-            <button id="next" class="button" onclick="Next()">Próximo</button>
-            <button id="back" class="button" onclick="Back()">Voltar</button>
-          </div>
+        <div class="noticia-imagem-2">
+          <img src="{{ url_for('static', filename='img-noticias/img-noticias-2.png') }}" />
+        </div>
+        <div class="noticia-imagem-3">
+          <img src="{{ url_for('static', filename='img-noticias/img-noticias-3.png') }}" />
         </div>
       </div>
-    </div>
-
-    <!-- Produtos -->
-    <div class="text-produtos">
-      <p>Principais produtos</p>
-    </div>
-    <div class="produtos">
-      <div class="container">
-        <img
-          src="{{ url_for('static', filename='img-produtos/camisa.webp') }}"
-          alt="img-camisa"
-        />
-        <a href="" class="botao">DETALHES</a>
-      </div>
-
-      <div class="container">
-        <img
-          src="{{ url_for('static', filename='img-produtos/headset.jpg') }}"
-          alt="img-headset"
-        />
-        <a href="" class="botao">DETALHES</a>
-      </div>
-
-      <div class="container">
-        <img
-          src="{{ url_for('static', filename='img-produtos/meia_branca.jpg') }}"
-          alt="img-meia-branca"
-        />
-        <a href="" class="botao">DETALHES</a>
-      </div>
-
-      <div class="container">
-        <img
-          src="{{ url_for('static', filename='img-produtos/meia_preta.jpg') }}"
-          alt="img-meia-preta"
-        />
-        <a href="" class="botao">DETALHES</a>
-      </div>
-    </div>
-
-    <!-- Agenda -->
-    <div class="agenda">
-      <div class="text-agenda">
-        <p>Agenda</p>
-      </div>
-
-      <div class="caixas_agenda">
-        <div class="agenda_box_1">
-          <div id="calendar"></div>
+      <div class="noticias-txt">
+        <div class="titulo">
+          <p id="titulo">VORTEX BATE META DE SEGUIDORES</p>
         </div>
-        <div class="agenda_box_2">
-          <h1 class="title-agenda">JOGOS 2026</h1>
-          <p class="paragrafo-agenda">
-            Clique nos intens destacados e veja a programação de quando e onde
-            irão acontecer os jogos.
+        <div class="paragrafo">
+          <p id="paragrafo">
+            "No dia 05/10/2025, a VORTEX alcançou a marca de 1 milhão de
+            seguidores no Instagram, um marco importante na trajetória do
+            time. Os jogadores comemoram a conquista, que representa o
+            reconhecimento do trabalho da equipe e o apoio da comunidade de
+            fãs. Essa conquista reforça a presença da VORTEX nas redes sociais
+            e mostra como os torcedores acompanham e celebram cada passo do
+            time. Confira todos os detalhes no link abaixo!";
           </p>
-          <footer id="footer-agenda">
-            &copy; 2025 Vortex E-sports IFRN Campus Apodi.
-          </footer>
+        </div>
+        <div class="link">
+          <a href="https://chatgpt.com/">detalhes</a>
+        </div>
+        <div class="botoes">
+          <button id="next" class="button" onclick="Next()">Próximo</button>
+          <button id="back" class="button" onclick="Back()">Voltar</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer id="contato">
-      <p>
-        &copy; 2025 Vortex E-sports. Todos os direitos reservados. Projeto da II
-        Semana de Informática - IFRN Campus Apodi.
-      </p>
-    </footer>
+  <!-- Produtos -->
+  <div class="text-produtos">
+    <p>Principais produtos</p>
+  </div>
+  <div class="produtos">
+    <div class="container">
+      <img src="{{ url_for('static', filename='img-produtos/camisa.webp') }}" alt="img-camisa" />
+      <a href="" class="botao">DETALHES</a>
+    </div>
 
-    <!-- JS -->
-    <script src="{{ url_for('static',filename='script/slide.js') }}"></script>
-    <script src="{{ url_for('static',filename='script/noticias.js') }}"></script>
-    <script>
-      let titulo = document.querySelector(".title-agenda");
-      let paragrafo = document.querySelector(".paragrafo-agenda");
-      $(document).ready(function () {
-        $("#calendar").fullCalendar({
-          header: {
-            left: "",
-            center: "title",
-            right: "",
-          },
-          defaultDate: "2026-01-01",
-          validRange: {
-            start: "2026-01-01",
-            end: "2026-01-31",
-          },
-        });
+    <div class="container">
+      <img src="{{ url_for('static', filename='img-produtos/headset.jpg') }}" alt="img-headset" />
+      <a href="" class="botao">DETALHES</a>
+    </div>
 
-        const semana = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
-        const data = ["2026-01-22", "2026-01-23", "2026-01-24"];
+    <div class="container">
+      <img src="{{ url_for('static', filename='img-produtos/meia_branca.jpg') }}" alt="img-meia-branca" />
+      <a href="" class="botao">DETALHES</a>
+    </div>
 
-        let ultimoSelecionado = null; // <-- FORA DO LOOP
+    <div class="container">
+      <img src="{{ url_for('static', filename='img-produtos/meia_preta.jpg') }}" alt="img-meia-preta" />
+      <a href="" class="botao">DETALHES</a>
+    </div>
+  </div>
 
-        data.forEach((dia) => {
-          const cell = document.querySelector(`[data-date="${dia}"]`);
+  <!-- Agenda -->
+  <div class="agenda">
+    <div class="text-agenda">
+      <p>Agenda</p>
+    </div>
 
-          if (cell) {
-            // Cor inicial
-            cell.style.backgroundColor = "#39810c";
-            cell.style.color = "black";
+    <div class="caixas_agenda">
+      <div class="agenda_box_1">
+        <div id="calendar"></div>
+      </div>
+      <div class="agenda_box_2">
+        <h1 class="title-agenda">JOGOS 2026</h1>
+        <p class="paragrafo-agenda">
+          Clique nos intens destacados e veja a programação de quando e onde
+          irão acontecer os jogos.
+        </p>
+        <footer id="footer-agenda">
+          &copy; 2025 Vortex E-sports IFRN Campus Apodi.
+        </footer>
+      </div>
+    </div>
+  </div>
 
-            cell.addEventListener("click", () => {
-              // Se já existe uma célula selecionada, reseta
-              if (ultimoSelecionado && ultimoSelecionado !== cell) {
-                ultimoSelecionado.style.backgroundColor = "#39810c";
-                ultimoSelecionado.style.color = "";
-              }
-              if (dia === "2026-01-22") {
-                titulo.innerHTML = "Dia 22 - VORTEX x TIME 1";
-                paragrafo.innerHTML =
-                  "No dia 22/01/2026, o time Vortex enfrentará o Time 1 na sala 67. Horários: das 13:30 às 14:30. Esteja lá para acompanhar nosso jogo! Contamos com você!";
-              } else if (dia === "2026-01-23") {
-                titulo.innerHTML = "Dia 23 - VORTEX x TIME 2";
-                paragrafo.innerHTML =
-                  "No dia 23/01/2026, o time Vortex enfrentará o Time 2 na sala 66. Horários: das 13:50 às 14:50. Estamos te esperando!";
-              } else {
-                titulo.innerHTML = "Dia 24 - VORTEX x TIME 3";
-                paragrafo.innerHTML =
-                  "No dia 24/01/2026, o time Vortex enfrentará o Time 3 na sala 65. Horários: das 16:20 às 17:20. Acompanhe nossa batalha final!";
-              }
+  <footer id="contato">
+    <p>
+      &copy; 2025 Vortex E-sports. Todos os direitos reservados. Projeto da II
+      Semana de Informática - IFRN Campus Apodi.
+    </p>
+  </footer>
 
-              // Seleciona a nova célula
-              cell.style.backgroundColor = "#39810c50";
-              cell.style.color = "white";
+  <!-- JS -->
+  <script src="{{ url_for('static',filename='script/slide.js') }}"></script>
+  <script src="{{ url_for('static',filename='script/noticias.js') }}"></script>
+  <script src="{{ url_for('static',filename='script/calendar.js') }}"></script>
+</body>
 
-              // Atualiza o último clicado
-              ultimoSelecionado = cell;
-            });
-          }
-        });
-      });
-    </script>
-  </body>
 </html>

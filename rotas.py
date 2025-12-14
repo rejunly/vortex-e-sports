@@ -21,6 +21,6 @@ def timevortex():
 def shop():
     return render_template('shop.html')
 
-@app.route('/transmission')
+@app.route('/tela_transmissao.html')
 def transmission():
     return render_template('tela_transmissao.html')

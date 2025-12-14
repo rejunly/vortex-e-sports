@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,130 +38,131 @@
     }
 
     /* ---- HEADER E NAVBAR ---- */
-header {
-  background-color: rgba(18, 18, 18, 0.8);
-  backdrop-filter: blur(10px);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #282828;
-}
+    header {
+      background-color: rgba(18, 18, 18, 0.8);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #282828;
+    }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-}
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
 
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--light-text);
-  font-weight: 700;
-  font-size: 1.2rem;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--light-text);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
 
-.logo img {
-  height: 40px;
-  margin-right: 10px;
-}
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--light-text);
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: var(--light-text);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
 
-.nav-links a:hover {
-  color: var(--primary-green);
-}
+    .nav-links a:hover {
+      color: var(--primary-green);
+    }
 
-.search-bar {
-  display: flex;
-}
+    .search-bar {
+      display: flex;
+    }
 
-.search-bar input {
-  background-color: var(--card-bg);
-  border: 1px solid #333;
-  border-radius: 20px 0 0 20px;
-  padding: 0.5rem 1rem;
-  color: var(--light-text);
-  outline: none;
-}
+    .search-bar input {
+      background-color: var(--card-bg);
+      border: 1px solid #333;
+      border-radius: 20px 0 0 20px;
+      padding: 0.5rem 1rem;
+      color: var(--light-text);
+      outline: none;
+    }
 
-.search-bar button {
-  background-color: var(--card-bg);
-  border: 1px solid #333;
-  border-left: none;
-  border-radius: 0 20px 20px 0;
-  padding: 0.5rem 1rem;
-  color: var(--secondary-text);
-  cursor: pointer;
-}
+    .search-bar button {
+      background-color: var(--card-bg);
+      border: 1px solid #333;
+      border-left: none;
+      border-radius: 0 20px 20px 0;
+      padding: 0.5rem 1rem;
+      color: var(--secondary-text);
+      cursor: pointer;
+    }
 
-/* ---- FOOTER ---- */
-footer {
-  text-align: center;
-  padding: 2rem;
-  margin-top: 3rem;
-  border-top: 1px solid #282828;
-  color: var(--secondary-text);
-}
+    /* ---- FOOTER ---- */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      border-top: 1px solid #282828;
+      color: var(--secondary-text);
+    }
 
-/* ---- ESTILOS DO MENU DROPDOWN ---- */
-.nav-links .dropdown {
-  position: relative;
-}
+    /* ---- ESTILOS DO MENU DROPDOWN ---- */
+    .nav-links .dropdown {
+      position: relative;
+    }
 
-.dropdown .fa-chevron-down {
-  font-size: 0.8em;
-  margin-left: 5px;
-}
+    .dropdown .fa-chevron-down {
+      font-size: 0.8em;
+      margin-left: 5px;
+    }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--card-bg);
-  list-style: none;
-  padding: 0.5rem 0;
-  border-radius: 8px;
-  border: 1px solid #333;
-  min-width: 160px;
-  z-index: 1001;
-}
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--card-bg);
+      list-style: none;
+      padding: 0.5rem 0;
+      border-radius: 8px;
+      border: 1px solid #333;
+      min-width: 160px;
+      z-index: 1001;
+    }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
 
-.dropdown-menu li a {
-  padding: 0.75rem 1.5rem;
-  display: block;
-  color: var(--light-text);
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
+    .dropdown-menu li a {
+      padding: 0.75rem 1.5rem;
+      display: block;
+      color: var(--light-text);
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
 
-.dropdown-menu li a:hover {
-  background-color: #2a2a2a;
-  color: var(--primary-green);
-}
+    .dropdown-menu li a:hover {
+      background-color: #2a2a2a;
+      color: var(--primary-green);
+    }
+
     /* ---- CONTEÚDO PRINCIPAL ---- */
     main {
       margin-top: 100px;
@@ -296,15 +298,18 @@ footer {
         flex-direction: column;
         gap: 1rem;
       }
+
       .nav-links {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
       }
+
       .live-section {
         flex-direction: column;
         align-items: center;
       }
+
       .stream-container iframe,
       .chat-container iframe {
         height: 360px;
@@ -314,49 +319,41 @@ footer {
 </head>
 
 <body>
-    <header>
-      <nav class="navbar">
-        <a href="#" class="logo">
-          <img
-            src="{{ url_for('static', filename='FOTOS/logo.png') }}"
-            alt="Logo Time Vortex"
-          />
-          <span>VORTEX</span>
-        </a>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="{{ url_for('static', filename='FOTOS/logo.png') }}" alt="Logo Time Vortex" />
+        <span>VORTEX</span>
+      </a>
 
-        <ul class="nav-links">
-          <l1><a href="{{ url_for('home') }}">HOME</a></l1>
-          <li class="dropdown">
-            <a> TIME VORTEX <i class="fas fa-chevron-down"></i> </a>
-            <ul class="dropdown-menu">
-              <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
-              <li><a href="{{ url_for('transmission') }}">Transmissão ao Vivo</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ url_for('shop') }}">SHOP</a></li>
-          <li><a href="#contato">CONTATO</a></li>
-        </ul>
+      <ul class="nav-links">
+        <l1><a href="{{ url_for('home') }}">HOME</a></l1>
+        <li class="dropdown">
+          <a> TIME VORTEX <i class="fas fa-chevron-down"></i> </a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
+            <li><a href="{{ url_for('transmission') }}">Transmissão ao Vivo</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ url_for('shop') }}">SHOP</a></li>
+        <li><a href="#contato">CONTATO</a></li>
+      </ul>
 
-        <div class="navbar-right">
-          <a href="#" class="login-button">ENTRAR</a>
-          <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
-          <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-        </div>
-      </nav>
-    </header>
+      <div class="navbar-right">
+        <a href="{{ url_for('logincadastro') }}" class="login-button">ENTRAR</a>
+        <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+        <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+      </div>
+    </nav>
+  </header>
 
   <main>
     <section class="live-section">
       <div class="stream-container">
         <!-- Substitua "riotgames" e "example.com" pelo seu canal/domínio -->
-        <iframe
-            src="https://player.twitch.tv/?channel=valorant_br&parent=localhost"
-            frameborder="0"
-            allowfullscreen="true"
-            scrolling="no"
-            height="480"
-            width="100%">
+        <iframe src="https://player.twitch.tv/?channel=valorant_br&parent=localhost" frameborder="0"
+          allowfullscreen="true" scrolling="no" height="480" width="100%">
         </iframe>
       </div>
 
@@ -367,7 +364,8 @@ footer {
 
     <section class="live-info">
       <h2>TRANSMISSÕES AO VIVO</h2>
-      <p>Assista às transmissões da equipe <strong>Vortex E-sports</strong> diretamente da Twitch e YouTube. Treinos, partidas e torneios em tempo real!</p>
+      <p>Assista às transmissões da equipe <strong>Vortex E-sports</strong> diretamente da Twitch e YouTube. Treinos,
+        partidas e torneios em tempo real!</p>
 
       <div class="schedule">
         <div class="schedule-card">
@@ -385,7 +383,9 @@ footer {
   </main>
 
   <footer id="contato">
-    <p>&copy; 2025 Vortex E-sports. Todos os direitos reservados. Projeto da II Semana de Informática - IFRN Campus Apodi.</p>
+    <p>&copy; 2025 Vortex E-sports. Todos os direitos reservados. Projeto da II Semana de Informática - IFRN Campus
+      Apodi.</p>
   </footer>
 </body>
+
 </html>
