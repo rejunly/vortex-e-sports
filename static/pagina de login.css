@@ -62,7 +62,12 @@ input:-webkit-autofill:active {
 }
 
 input::placeholder {
-  color: rgba(100, 100, 100, 0.6);
+  color: rgb(0, 0, 0);
+}
+
+
+#login-password, #login-email, #cadastro-username, #cadastro-email, #cadastro-password, #cadastro-confirm-password{
+  color:#000000b3 !important;
 }
 
 button {
@@ -103,13 +108,13 @@ p {
   animation: slideDown 0.3s ease-out;
 }
 
-.feedback-message.success {
-  background-color: rgba(85, 49, 153, 0.2);
-  color: #553199;
-  border: 1px solid #553199;
+#login-feedback{
+  background-color: rgba(0, 255, 72, 0.2);
+  color: rgb(0, 255, 72);
+  border: 1px solid #00ff11;
 }
 
-.feedback-message.error {
+#login-feedback.error {
   background-color: rgba(255, 82, 82, 0.2);
   color: #ff5252;
   border: 1px solid #ff5252;
@@ -165,6 +170,7 @@ button:disabled {
   position: relative;
   overflow: hidden;
   /* Esconde o que sai para fora do cartão */
+  border-radius: 10px;
 }
 
 .esquerda,
@@ -230,14 +236,8 @@ button:disabled {
    A camada verde que desliza e cria o efeito Chroma Key
    ========================================= */
 .green-curtain {
-  /* Green Curtain: Verde Citrico Fade */
-  background: linear-gradient(135deg, #9bce26 0%, rgba(211, 252, 114, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  background-color:#67499b;
   z-index: 1;
-  /* Above image, below content */
-  mix-blend-mode: color-dodge;
-  /* Blends with dark BG for "Green Screen" feel */
-  opacity: 0.4;
-  pointer-events: none;
 }
 
 
@@ -272,6 +272,18 @@ button:disabled {
   opacity: 1;
   pointer-events: all;
   transform: translateX(0);
+}
+
+
+.facaLogin h2, .facaLogin p {
+  color: #67499b !important;
+}
+
+.facaCadastro p, .facaCadastro h2 {
+  color: #67499b !important;
+}
+.formLogin, #card.card.loginActive, .formCadastro, #card.card.CadastroActive{
+  color: #d3fc72;
 }
 
 .card.loginActive .formCadastro,
@@ -358,7 +370,7 @@ button:disabled {
 
 .adventure-text {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255, 255, 255);
   margin-bottom: 8px !important;
   /* Override default p margin */
   width: 100%;

@@ -24,3 +24,7 @@ def shop():
 @app.route('/tela_transmissao.html')
 def transmission():
     return render_template('tela_transmissao.html')
+
+@app.route('/perfil')
+def perfil():   
+    return render_template('perfil.html')
