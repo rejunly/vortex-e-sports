@@ -10,4 +10,4 @@ const supabase = window.supabase.createClient(
 );
 
 // expõe globalmente
-window.supabaseClient = supabase;
+window.supabaseClient = supabase_all;

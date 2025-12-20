@@ -8,19 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
       titulo: "VORTEX BATE META DE SEGUIDORES",
       imagem: "img-noticias/img-noticias-1..png",
       paragrafo:
-        "No dia 05/10/2025, a VORTEX alcançou a marca de 1 milhão de seguidores...",
+        "No dia 05/10/2025, a VORTEX alcançou a marca de 1 milhão de seguidores no Instagram! Confira as palavras da equipe que vem se destacando cada vez mais no cenário de e-sports no Brasil!",
       index: 0,
     },
     {
-      titulo: "TESTANDO O TÍTULO 2",
+      titulo: "OS MELHORES MOMENTOS DA LIVE DO DIA 22/12/2025",
       imagem: "img-noticias/img-noticias-2.png",
-      paragrafo: "AAAAAAAAAAAAAAAA...",
+      paragrafo: "Na live do dia 22/12, os jogadores do time Vortex divulgaram as composições do time que será usado no campeonato de jogos e-sports na semana da informática do IFRN.",
       index: 1,
     },
     {
-      titulo: "TÍTULO FINAL",
+      titulo: "PREPARÇÕES FINAIS",
       imagem: "img-noticias/img-noticias-2.png",
-      paragrafo: "Texto final aqui.",
+      paragrafo: "Encerrando a temporada com chave de ouro, a equipe VORTEX celebra os resultados conquistados ao longo do ano e já se prepara para novos desafios em 2026. A organização reforça seu compromisso com o crescimento do cenário de e-sports e promete grandes novidades para a comunidade.",
       index: 2,
     },
   ];

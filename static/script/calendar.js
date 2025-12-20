@@ -1,4 +1,3 @@
-// Calendar logic extracted from home.html
 $(document).ready(function () {
   let titulo = document.querySelector(".title-agenda");
   let paragrafo = document.querySelector(".paragrafo-agenda");
@@ -44,18 +43,14 @@ $(document).ready(function () {
       const evento = eventos[dateString];
 
       if (evento) {
-        // Reset styling of previously selected
         if (ultimoSelecionado) {
           ultimoSelecionado.css("background-color", "#39810c");
           ultimoSelecionado.css("color", "");
         }
 
-        // Update text
         titulo.innerHTML = evento.titulo;
         paragrafo.innerHTML = evento.paragrafo;
 
-        // Highlight new selection
-        // 'this' in dayClick is the raw DOM element, so we wrap it
         const cell = $(this);
         cell.css("background-color", "#39810c50");
         cell.css("color", "white");
