@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="/static/script/perfil.js"></script>
   <title>Vortex E-sports | Transmissão Ao Vivo</title>
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,130 +39,241 @@
     }
 
     /* ---- HEADER E NAVBAR ---- */
-    header {
-      background-color: rgba(18, 18, 18, 0.8);
-      backdrop-filter: blur(10px);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #282828;
-    }
+body{
+    font-family: "Poppins", sans-serif;
+}
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-    }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--light-text);
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
 
-    .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
+header {
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #282828;
+}
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
-    }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      color: var(--light-text);
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 
-    .nav-links a:hover {
-      color: var(--primary-green);
-    }
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
 
-    .search-bar {
-      display: flex;
-    }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
 
-    .search-bar input {
-      background-color: var(--card-bg);
-      border: 1px solid #333;
-      border-radius: 20px 0 0 20px;
-      padding: 0.5rem 1rem;
-      color: var(--light-text);
-      outline: none;
-    }
+.nav-links a {
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-    .search-bar button {
-      background-color: var(--card-bg);
-      border: 1px solid #333;
-      border-left: none;
-      border-radius: 0 20px 20px 0;
-      padding: 0.5rem 1rem;
-      color: var(--secondary-text);
-      cursor: pointer;
-    }
+.nav-links a:hover {
+  color: var(--primary-green);
+}
 
-    /* ---- FOOTER ---- */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      margin-top: 3rem;
-      border-top: 1px solid #282828;
-      color: var(--secondary-text);
-    }
+.navbar-right{
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  margin: 0rem;
+  padding: 0rem;
+}
 
-    /* ---- ESTILOS DO MENU DROPDOWN ---- */
-    .nav-links .dropdown {
-      position: relative;
-    }
+.search-bar {
+  display: flex;
+}
 
-    .dropdown .fa-chevron-down {
-      font-size: 0.8em;
-      margin-left: 5px;
-    }
+.search-bar input {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  border-radius: 20px 0 0 20px;
+  padding: 0.5rem 1rem;
+  color: var(--light-text);
+  outline: none;
+}
 
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: var(--card-bg);
-      list-style: none;
-      padding: 0.5rem 0;
-      border-radius: 8px;
-      border: 1px solid #333;
-      min-width: 160px;
-      z-index: 1001;
-    }
+.search-bar button {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  padding: 0.5rem 1rem;
+  color: var(--secondary-text);
+  cursor: pointer;
+}
 
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
+/* ---- FOOTER ---- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid #282828;
+  color: var(--secondary-text);
+}
 
-    .dropdown-menu li a {
-      padding: 0.75rem 1.5rem;
-      display: block;
-      color: var(--light-text);
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+/* ---- ESTILOS DO MENU DROPDOWN ---- */
+.nav-links .dropdown {
+  position: relative;
+}
 
-    .dropdown-menu li a:hover {
-      background-color: #2a2a2a;
-      color: var(--primary-green);
-    }
+.dropdown .fa-chevron-down {
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--card-bg);
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #333;
+  min-width: 160px;
+  z-index: 1001;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 0.75rem 1.5rem;
+  display: block;
+  color: var(--light-text);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #2a2a2a;
+  color: var(--primary-green);
+}
+
+
+.bg{
+    display: flex;
+    background-color: aliceblue;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+
+
+.nome_usuario, .email_usuario{
+    font-size: 1rem;
+    color: rgb(0, 255, 21);
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: max-content;
+    display: flex;
+    align-items:start; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+
+}
+
+.button-alternate{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10px;
+    align-items: center;
+    background-color:rgb(4, 255, 0);
+    margin: 0.5rem 0rem;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+.dropdown-nr .fa-chevron-down {
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+
+.dropdown-menu-nr {
+  display: none;
+  position: absolute;
+  top: 70%;
+  right: 200px;
+  background-color: var(--card-bg);
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #333;
+  min-width: 160px;
+  z-index: 1001;
+}
+
+.dropdown-nr:hover .dropdown-menu-nr {
+  display: block;
+  padding: 10px;
+}
+
+.dropdown-menu-nr li a {
+  padding: 0.25rem 0.5rem;
+  display: block;
+  color: var(--light-text);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu-nr li a:hover {
+  background-color: #2a2a2a;
+  color: var(--primary-green);
+}
+
+/* ---- FOOTER ---- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid #282828;
+  color: var(--secondary-text);
+}
+.search-bar button {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  padding: 0.5rem 1rem;
+  color: var(--secondary-text);
+  cursor: pointer;
+}
+.navbar-right { display: flex; align-items: center; gap: 1.5rem; }
+.navbar-right a { color: var(--light-text); font-size: 1.2rem; text-decoration: none; transition: color 0.3s ease; }
+.navbar-right a:hover { color: var(--primary-green); }
+.cart-icon-wrapper { position: relative; }
+.cart-count { position: absolute; top: -8px; right: -10px; background-color: var(--primary-green); color: var(--dark-bg); border-radius: 50%; width: 20px; height: 20px; font-size: 0.75rem; font-weight: bold; display: flex; justify-content: center; align-items: center; }
 
     /* ---- CONTEÚDO PRINCIPAL ---- */
     main {
@@ -319,9 +431,9 @@
 </head>
 
 <body>
-  <header>
+    <header>
     <nav class="navbar">
-      <a href="#" class="logo">
+      <a href="{{ url_for('home') }}" class="logo">
         <img src="{{ url_for('static', filename='FOTOS/logo.png') }}" alt="Logo Time Vortex" />
         <span>VORTEX</span>
       </a>
@@ -336,15 +448,29 @@
           </ul>
         </li>
         <li><a href="{{ url_for('shop') }}">SHOP</a></li>
-        <li><a href="#contato">CONTATO</a></li>
       </ul>
 
-      <div class="navbar-right">
-        <a href="{{ url_for('logincadastro') }}" class="login-button">ENTRAR</a>
-        <a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
-        <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
-        <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-      </div>
+
+      <ul class="navbar-right">
+          <li class="dropdown-nr">
+            <a href="#" class="nav-icon">
+            <i class="fa-solid fa-user"></i> </a>
+            <ul class="dropdown-menu-nr">
+              <li class="nome_usuario">Carregando perfil...</li>
+              <li class="email_usuario">Aguarde!</li>
+              <li><button class="button-alternate" onclick="window.location.replace('/')" >Login</button></li>
+            </ul>
+          </li>
+          <a href="{{ url_for('shop') }}" class="nav-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+
+          <a href="{{ url_for('shop') }}" class="nav-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </li>
+          
+        </ul>
     </nav>
   </header>
 

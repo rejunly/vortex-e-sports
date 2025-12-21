@@ -28,8 +28,13 @@ async function carregarPerfil() {
 
   let email = user.user_metadata.email;
   let email_print = document.querySelector(".email_usuario")
+  let button = document.querySelector(".button-alternate")
   nome_print.innerHTML = nome
-  email_print.innerHTML = email 
+  email_print.innerHTML = email
+  function redirecionar() {
+    window.location.replace('/')
+  }
+  button.innerHTML = "Logout"
 }
 
 carregarPerfil()

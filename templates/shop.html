@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loja Vortex E-sports</title>
   <link rel="icon" href="img/logo.jpeg" type="image/png">
+  <script type="module" src="/static/script/perfil.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -15,42 +16,46 @@
 </head>
 
 <body>
-  <header>
+    <header>
     <nav class="navbar">
-
-      <a href="#" class="logo">
+      <a href="{{ url_for('home') }}" class="logo">
         <img src="{{ url_for('static', filename='FOTOS/logo.png') }}" alt="Logo Time Vortex" />
         <span>VORTEX</span>
       </a>
 
       <ul class="nav-links">
-
-        <li><a href="{{ url_for('home') }}">HOME</a></li>
-
+        <l1><a href="{{ url_for('home') }}">HOME</a></l1>
         <li class="dropdown">
-          <a href="#">
-            TIME VORTEX <i class="fas fa-chevron-down"></i>
-          </a>
+          <a> TIME VORTEX <i class="fas fa-chevron-down"></i> </a>
           <ul class="dropdown-menu">
             <li><a href="{{ url_for('timevortex') }}">Sobre o Time</a></li>
             <li><a href="{{ url_for('transmission') }}">Transmissão ao Vivo</a></li>
           </ul>
         </li>
-
         <li><a href="{{ url_for('shop') }}">SHOP</a></li>
-        <li><a href="#contato">CONTATO</a></li>
-
       </ul>
 
-      <div class="navbar-right">
-        <a href="{{ url_for('logincadastro') }}" class="login-button">ENTRAR</a>
-        <a href="#" id="btnCarrinho" class="cart-icon-wrapper">
-          <i class="fas fa-shopping-cart"></i>
-          <span id="cart-count" class="cart-count">0</span>
-        </a>
-        <a href="{{ url_for('logincadastro') }}"><i class="fas fa-user"></i></a>
-      </div>
 
+      <ul class="navbar-right">
+          <li class="dropdown-nr">
+            <a href="#" class="nav-icon">
+            <i class="fa-solid fa-user"></i> </a>
+            <ul class="dropdown-menu-nr">
+              <li class="nome_usuario">Carregando perfil...</li>
+              <li class="email_usuario">Aguarde!</li>
+              <li><button class="button-alternate" onclick="window.location.replace('/')" >Login</button></li>
+            </ul>
+          </li>
+          <a href="{{ url_for('shop') }}" class="nav-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+
+          <a href="{{ url_for('shop') }}" class="nav-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </li>
+          
+        </ul>
     </nav>
   </header>
 
